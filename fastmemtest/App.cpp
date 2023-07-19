@@ -37,7 +37,7 @@ class MemTestApp : public nt::App
 		while (true)
 		{
 			Console::Write("正在运行第");
-			nt::utility::ToString(times / 1024, buf, 30);
+			nt::utility::ToString(times, buf, 30);
 			Console::Write(buf);
 			Console::WriteLine("次测试.");
 			void* pbase = (void*)0;

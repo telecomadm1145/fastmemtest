@@ -149,4 +149,7 @@
     </ClInclude>
     <ClInclude Include="PowRandom.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.md" />
+  </ItemGroup>
 </Project>

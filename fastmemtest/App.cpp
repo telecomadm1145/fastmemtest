@@ -106,8 +106,8 @@ class MemTestApp : public nt::App
 				exit(0);
 				return;
 			}
-			Console::WriteLine("按任意键继续下一轮测试.");
-			Console::ReadLine();
+			//Console::WriteLine("按任意键继续下一轮测试.");
+			//Console::ReadLine();
 			times++;
 		}
 		exit(0);

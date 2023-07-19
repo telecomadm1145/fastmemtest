@@ -98,6 +98,9 @@ class MemTestApp : public nt::App
 			nt::utility::ToString(totalerrors, buf, 30);
 			Console::Write(buf);
 			Console::WriteLine("个错误.");
+			Console::Write("读写了:");
+			nt::utility::ToString((ulonglong)(times * (regionsize / 1024 / 1024) * 3), buf, 30);
+			Console::WriteLine("MB.");
 			err = Ntdll.NtFreeVirtualMemory((void*)-1ULL, &pbase, &regionsize, 0x00008000);
 			if (err != ntdll::NtStatus::Success)
 			{

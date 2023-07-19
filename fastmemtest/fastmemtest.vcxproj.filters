@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="Init.cpp">
+      <Filter>ntsdk</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>ntsdk\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="peb.cpp">
+      <Filter>ntsdk\Winternl</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtMemory.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtMisc.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="Ntdll.cpp">
+      <Filter>ntsdk\Natives\Dlls</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtExit.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtInit.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtInitData.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="StdException.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="CrtLock.cpp">
+      <Filter>ntsdk\Crt</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>ntsdk\Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>ntsdk\File</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>ntsdk\File</Filter>
+    </ClCompile>
+    <ClCompile Include="ZInitConsole.cpp">
+      <Filter>ntsdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ntsdk">
+      <UniqueIdentifier>{4c2b4c59-cd4d-46dc-9c65-eee3d59aa530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Misc">
+      <UniqueIdentifier>{ef5a092f-e57e-49db-858d-3c32ef646628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Winternl">
+      <UniqueIdentifier>{bf65c766-2dff-4f59-a3fa-d69cac77e35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Crt">
+      <UniqueIdentifier>{12ee496f-b7d8-4c64-bf0e-f16828d3208b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Utility">
+      <UniqueIdentifier>{45a1e8b1-8bf8-4715-a887-2887d281d037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Natives">
+      <UniqueIdentifier>{00038346-dcd9-4b93-bc9a-0c8a33172a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Natives\Ldr">
+      <UniqueIdentifier>{5e064976-e655-4d55-a198-cebcddd53430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\Natives\Dlls">
+      <UniqueIdentifier>{3df1ab45-e924-43c0-ae0b-10b5a898bdd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntsdk\File">
+      <UniqueIdentifier>{82ceaeea-b885-4e43-b0fc-af98fff2de51}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="peb.h">
+      <Filter>ntsdk\Winternl</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>ntsdk\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Importing.h">
+      <Filter>ntsdk\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Dll.h">
+      <Filter>ntsdk\Natives\Ldr</Filter>
+    </ClInclude>
+    <ClInclude Include="PE.h">
+      <Filter>ntsdk\Natives\Ldr</Filter>
+    </ClInclude>
+    <ClInclude Include="NtPeb.h">
+      <Filter>ntsdk\Natives\Ldr</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Process.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="ntdll.h">
+      <Filter>ntsdk\Natives\Dlls</Filter>
+    </ClInclude>
+    <ClInclude Include="CrtInit.h">
+      <Filter>ntsdk\Crt</Filter>
+    </ClInclude>
+    <ClInclude Include="CrtExit.h">
+      <Filter>ntsdk\Crt</Filter>
+    </ClInclude>
+    <ClInclude Include="CrtInitData.h">
+      <Filter>ntsdk\Crt</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>ntsdk</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>ntsdk\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Teb.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Stream.h">
+      <Filter>ntsdk\File</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>ntsdk\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>ntsdk\File</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>ntsdk\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Number.h">
+      <Filter>ntsdk\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="PowRandom.h" />
+  </ItemGroup>
+</Project>

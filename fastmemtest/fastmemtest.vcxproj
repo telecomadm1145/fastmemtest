@@ -195,6 +195,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="ConApi.cpp" />
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="CrtExit.cpp" />
     <ClCompile Include="CrtInit.cpp" />
@@ -216,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="ConApi.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="CrtExit.h" />
     <ClInclude Include="CrtInit.h" />

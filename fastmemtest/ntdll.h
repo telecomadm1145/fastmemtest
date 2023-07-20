@@ -363,6 +363,17 @@ namespace nt::native::ntdll
 		ulong length,
 		ulong* retlength
 	);
+	NtStatus NtDeviceIoControlFile(void* handle,
+		void* event,
+		IoApcRoutine apcroutine,
+		void* apccontext,
+		IoStatusBlock* iostatus,
+		ulong ioctlcode,
+		void* input,
+		ulong length,
+		void* output,
+		ulong outlength
+	);
 	NtStatus NtAllocateVirtualMemory(
 		void* proc,
 		void** baseaddress,
@@ -410,6 +421,7 @@ namespace nt::native::ntdll
 		DeclareWinApi(NtWriteFile);
 		DeclareWinApi(NtQueryInformationFile);
 		DeclareWinApi(NtSetInformationFile);
+		DeclareWinApi(NtDeviceIoControlFile);
 
 		// Proc api
 		DeclareWinApi(RtlExitUserProcess);

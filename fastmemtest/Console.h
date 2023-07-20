@@ -2,6 +2,13 @@
 #include "FileStream.h"
 namespace System
 {
+	struct ConsoleKeyEvent
+	{
+		uint VirtualKey;
+		uint RepeatCount;
+		uint ControlKeyState;
+		wchar_t UnicodeChar;
+	};
 	class Console
 	{
 		static IO::Stream* pStdOut;
@@ -40,5 +47,7 @@ namespace System
 			char _[1024];
 			In().Read(_, 1024);
 		}
+		static ConsoleKeyEvent ReadKey();
+		static void SetTitle(const char*);
 	};
 }

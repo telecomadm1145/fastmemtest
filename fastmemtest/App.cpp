@@ -2,6 +2,8 @@
 #include "Console.h"
 #include "String.h"
 #include "PowRandom.h"
+#include "ConApi.h"
+
 
 class MemTestApp : public nt::App
 {
@@ -11,7 +13,7 @@ class MemTestApp : public nt::App
 		auto mod = GetModuleHandle("kernel32.dll");
 		using proc_type = bool(ulonglong*);
 		static constexpr auto crc64 = nt::utility::GetCrc64CT("GetPhysicallyInstalledSystemMemory");
-		auto proc = (proc_type*)GetProcAddressByCrc(mod,crc64);
+		auto proc = (proc_type*)GetProcAddressByCrc(mod, crc64);
 		ulonglong mem = 0;
 		if (proc(&mem))
 		{
@@ -24,7 +26,7 @@ class MemTestApp : public nt::App
 	{
 		using namespace nt::native;
 		using namespace System;
-		Console::WriteLine("内存速测 by github.com/telecomadm1145");
+		Console::SetTitle("FastMemTest");
 		PowRandom pero;
 		Console::Write("系统内存大小:");
 		auto len = GetMem();
@@ -61,11 +63,9 @@ class MemTestApp : public nt::App
 				auto crc = nt::utility::GetCrc64(pcur, 1016);
 				if ((crc & 0xffff) == 0)
 				{
-					Console::Write("进度:");
 					auto prog = int(((double)(pcur - pbase) / regionsize) * 100);
 					nt::utility::ToString(prog, buf, 30);
-					Console::Write(buf);
-					Console::WriteLine("%.");
+					Console::SetTitle(buf);
 				}
 				*(ulonglong*)(pcur + 1016) = crc;
 				pcur += 1024;
@@ -78,11 +78,9 @@ class MemTestApp : public nt::App
 				auto crc = nt::utility::GetCrc64(pcur, 1016);
 				if ((crc & 0xffff) == 0)
 				{
-					Console::Write("进度:");
 					auto prog = int(((double)(pcur - pbase) / regionsize) * 100);
 					nt::utility::ToString(prog, buf, 30);
-					Console::Write(buf);
-					Console::WriteLine("%.");
+					Console::SetTitle(buf);
 				}
 				if (*(ulonglong*)(pcur + 1016) != crc)
 				{
@@ -99,7 +97,8 @@ class MemTestApp : public nt::App
 			Console::Write(buf);
 			Console::WriteLine("个错误.");
 			Console::Write("读写了:");
-			nt::utility::ToString((ulonglong)(times * (regionsize / 1024 / 1024) * 3), buf, 30);
+			nt::utility::ToString((ulonglong)((times + 1) * (regionsize / 1024 / 1024) * 3), buf, 30);
+			Console::Write(buf);
 			Console::WriteLine("MB.");
 			err = Ntdll.NtFreeVirtualMemory((void*)-1ULL, &pbase, &regionsize, 0x00008000);
 			if (err != ntdll::NtStatus::Success)

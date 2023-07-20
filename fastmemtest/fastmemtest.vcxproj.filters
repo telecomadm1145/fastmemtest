@@ -47,6 +47,9 @@
     <ClCompile Include="ZInitConsole.cpp">
       <Filter>ntsdk</Filter>
     </ClCompile>
+    <ClCompile Include="ConApi.cpp">
+      <Filter>ntsdk\Natives</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ntsdk">
@@ -148,5 +151,8 @@
       <Filter>ntsdk\Utility</Filter>
     </ClInclude>
     <ClInclude Include="PowRandom.h" />
+    <ClInclude Include="ConApi.h">
+      <Filter>ntsdk\Natives</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
